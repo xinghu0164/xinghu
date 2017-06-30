@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Xing Hu</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://xinghu0164.github.io/"/>
+  <updated>2017-06-30T10:51:39.000Z</updated>
+  <id>http://xinghu0164.github.io/</id>
+  
+  <author>
+    <name>Xing Hu (Stella)</name>
+    <email>xinghu0164@gmail.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introduction of Hexo</title>
+    <link href="http://xinghu0164.github.io/2017/06/28/Get-Start/"/>
+    <id>http://xinghu0164.github.io/2017/06/28/Get-Start/</id>
+    <published>2017-06-28T02:40:37.000Z</published>
+    <updated>2017-06-30T10:51:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Introduction-of-Website-Techniques"><a href="#Introduction-of-Website-Techniques" class="headerlink" title="Introduction of Website Techniques"></a>Introduction of Website Techniques</h1><p>This website build on <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> and Github Pages. </p>
+<p>Hexo is a fast, simple &amp; powerful blog framework. It is based on Node.JS and brings incredible generating speed. All features of GitHub Flavored Markdown are supported.</p>
+<p>GitHub Pages is a static site hosting service. It is designed to host personal, organization, or project pages directly from a GitHub repository.</p>
+<h2 id="Hexo-Quick-Start"><a href="#Hexo-Quick-Start" class="headerlink" title="Hexo Quick Start"></a>Hexo Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<h3 id="Delete-a-post"><a href="#Delete-a-post" class="headerlink" title="Delete a post"></a>Delete a post</h3><ol>
+<li>delete the post under <em>source/_post</em> folder</li>
+<li>run following commands<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Introduction-of-Website-Techniques&quot;&gt;&lt;a href=&quot;#Introduction-of-Website-Techniques&quot; class=&quot;headerlink&quot; title=&quot;Introduction of Website 
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://xinghu0164.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C# Note1:Basic Concepts</title>
+    <link href="http://xinghu0164.github.io/2017/06/24/C-L1/"/>
+    <id>http://xinghu0164.github.io/2017/06/24/C-L1/</id>
+    <published>2017-06-24T10:44:47.000Z</published>
+    <updated>2017-06-30T10:46:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Introduction-of-C"><a href="#Introduction-of-C" class="headerlink" title="Introduction of C"></a>Introduction of C</h2><p>C# is designed for Common Language Infrastructure (CLI), which consists of the executable code and runtime environment that allows use of various high-level languages on different computer platforms and architectures.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Introduction-of-C&quot;&gt;&lt;a href=&quot;#Introduction-of-C&quot; class=&quot;headerlink&quot; title=&quot;Introduction of C&quot;&gt;&lt;/a&gt;Introduction of C&lt;/h2&gt;&lt;p&gt;C# is desi
+    
+    </summary>
+    
+    
+      <category term="C#" scheme="http://xinghu0164.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown-note</title>
+    <link href="http://xinghu0164.github.io/2017/06/20/markdown-note/"/>
+    <id>http://xinghu0164.github.io/2017/06/20/markdown-note/</id>
+    <published>2017-06-20T06:47:09.000Z</published>
+    <updated>2017-06-30T10:43:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Introduction-of-Markdown"><a href="#Introduction-of-Markdown" class="headerlink" title="Introduction of Markdown"></a>Introduction of Markdown</h1><p>Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform. It’s written in what nerds like to call “plaintext”, which is exactly the sort of text you’re used to writing and seeing.</p>
+<h1 id="Syntax-guide"><a href="#Syntax-guide" class="headerlink" title="Syntax guide"></a>Syntax guide</h1><h4 id="Headers"><a href="#Headers" class="headerlink" title="Headers"></a>Headers</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># This is an &lt;h1&gt; tag</span></div><div class="line"><span class="comment">## This is an &lt;h2&gt; tag</span></div><div class="line"><span class="comment">###### This is an &lt;h6&gt; tag</span></div></pre></td></tr></table></figure>
+<h4 id="Emphasis"><a href="#Emphasis" class="headerlink" title="Emphasis"></a>Emphasis</h4><p><em>This text will be italic</em><br><em>This will also be italic</em><br><strong>This text will be bold</strong><br><strong>This will also be bold</strong><br><em>You <strong>can</strong> combine them</em><br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">*This text will be italic*</div><div class="line">_This will also be italic_</div><div class="line">**This text will be bold**</div><div class="line">__This will also be bold__</div><div class="line">_You **can** combine them_</div></pre></td></tr></table></figure></p>
+<h4 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h4><h5 id="Unordered"><a href="#Unordered" class="headerlink" title="Unordered"></a>Unordered</h5><ul>
+<li>Item 1</li>
+<li>Item 2<ul>
+<li>Item 2a</li>
+<li>Item 2b<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">* Item 1</div><div class="line">* Item 2</div><div class="line">  * Item 2a</div><div class="line">  * Item 2b</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="Ordered"><a href="#Ordered" class="headerlink" title="Ordered"></a>Ordered</h5><ol>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3<ol>
+<li>Item 3a</li>
+<li>Item 3b<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">1. Item 1</div><div class="line">1. Item 2</div><div class="line">1. Item 3</div><div class="line">   1. Item 3a</div><div class="line">   1. Item 3b</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">![GitHub Logo](/images/logo.png)</div><div class="line">Format: ![Alt Text](url)</div></pre></td></tr></table></figure>
+<h4 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h4><p><a href="http://github.com" target="_blank" rel="external">http://github.com</a><br><a href="http://github.com" target="_blank" rel="external">GitHub</a><br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">http://github.com - automatic!</div><div class="line">[GitHub](http://github.com)</div></pre></td></tr></table></figure></p>
+<h4 id="Blockquotes"><a href="#Blockquotes" class="headerlink" title="Blockquotes"></a>Blockquotes</h4><p>As Kanye West said:</p>
+<blockquote>
+<p>We’re living the future so<br>the present is our past.<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&gt; We&apos;re living the future so</div><div class="line">&gt; the present is our past.</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="Inline-code"><a href="#Inline-code" class="headerlink" title="Inline code"></a>Inline code</h4><p>I think you should use an <code>&lt;addr&gt;</code> element here instead.</p>
+<h4 id="Task-Lists"><a href="#Task-Lists" class="headerlink" title="Task Lists"></a>Task Lists</h4><ul>
+<li>[x] @mentions, #refs, <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del> supported</li>
+<li>[x] list syntax required (any unordered or ordered list supported)</li>
+<li>[x] this is a complete item</li>
+<li>[ ] this is an incomplete item<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- [x] @mentions, #refs, [links](), **formatting**, and &lt;del&gt;tags&lt;/del&gt; supported</div><div class="line">- [x] list syntax required (any unordered or ordered list supported)</div><div class="line">- [x] this is a complete item</div><div class="line">- [ ] this is an incomplete item</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h4><p>You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+<th>Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content from cell 1</td>
+<td>Content from cell 2</td>
+<td>Content from cell 3</td>
+</tr>
+<tr>
+<td>Content in the first column</td>
+<td>Content in the second column</td>
+<td>Content in the third column</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">First Header | Second Header| Third Header</div><div class="line">------------ | -------------|------------</div><div class="line">Content from cell 1 | Content from cell 2| Content from cell 3</div><div class="line">Content in the first column | Content in the second column | Content in the third column</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Introduction-of-Markdown&quot;&gt;&lt;a href=&quot;#Introduction-of-Markdown&quot; class=&quot;headerlink&quot; title=&quot;Introduction of Markdown&quot;&gt;&lt;/a&gt;Introduction o
+    
+    </summary>
+    
+    
+      <category term="MarkDown" scheme="http://xinghu0164.github.io/tags/MarkDown/"/>
+    
+  </entry>
+  
+</feed>
