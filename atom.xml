@@ -264,95 +264,11 @@
   </entry>
   
   <entry>
-    <title>Introduction of Hexo</title>
-    <link href="http://xinghu0164.github.io/2017/06/28/Get-Start/"/>
-    <id>http://xinghu0164.github.io/2017/06/28/Get-Start/</id>
-    <published>2017-06-28T02:40:37.000Z</published>
-    <updated>2017-06-30T10:51:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Introduction-of-Website-Techniques"><a href="#Introduction-of-Website-Techniques" class="headerlink" title="Introduction of Website Techniques"></a>Introduction of Website Techniques</h1><p>This website build on <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> and Github Pages. </p>
-<p>Hexo is a fast, simple &amp; powerful blog framework. It is based on Node.JS and brings incredible generating speed. All features of GitHub Flavored Markdown are supported.</p>
-<p>GitHub Pages is a static site hosting service. It is designed to host personal, organization, or project pages directly from a GitHub repository.</p>
-<h2 id="Hexo-Quick-Start"><a href="#Hexo-Quick-Start" class="headerlink" title="Hexo Quick Start"></a>Hexo Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<h3 id="Delete-a-post"><a href="#Delete-a-post" class="headerlink" title="Delete a post"></a>Delete a post</h3><ol>
-<li>delete the post under <em>source/_post</em> folder</li>
-<li>run following commands<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Introduction-of-Website-Techniques&quot;&gt;&lt;a href=&quot;#Introduction-of-Website-Techniques&quot; class=&quot;headerlink&quot; title=&quot;Introduction of Website 
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="http://xinghu0164.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C# Study Note1</title>
-    <link href="http://xinghu0164.github.io/2017/06/24/C-L1/"/>
-    <id>http://xinghu0164.github.io/2017/06/24/C-L1/</id>
-    <published>2017-06-24T10:44:47.000Z</published>
-    <updated>2017-06-30T12:32:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Introduction-of-C"><a href="#Introduction-of-C" class="headerlink" title="Introduction of C"></a>Introduction of C</h2><p>C# is designed for Common Language Infrastructure (CLI), which consists of the executable code and runtime environment that allows use of various high-level languages on different computer platforms and architectures.</p>
-<h2 id="Reasons-make-C-a-widely-used-professional-language"><a href="#Reasons-make-C-a-widely-used-professional-language" class="headerlink" title="Reasons make C# a widely used professional language:"></a>Reasons make C# a widely used professional language:</h2><ul>
-<li>It is a modern, general-purpose programming language</li>
-<li>It is object oriented.</li>
-<li>It is component oriented.</li>
-<li>It is easy to learn.</li>
-<li>It is a structured language.</li>
-<li>It produces efficient programs.</li>
-<li>It can be compiled on a variety of computer platforms.</li>
-<li>It is a part of .Net Framework.</li>
-</ul>
-<h2 id="Important-features-of-C"><a href="#Important-features-of-C" class="headerlink" title="Important features of C"></a>Important features of C</h2><ul>
-<li>Boolean Conditions</li>
-<li>Automatic Garbage Collection</li>
-<li>Standard Library</li>
-<li>Assembly Versioning</li>
-<li>Properties and Events</li>
-<li>Delegates and Events Management</li>
-<li>Easy-to-use Generics</li>
-<li>Indexers</li>
-<li>Conditional Compilation</li>
-<li>Simple Multithreading</li>
-<li>LINQ and Lambda Expressions</li>
-<li>Integration with Windows</li>
-</ul>
-<h2 id="C-Notes"><a href="#C-Notes" class="headerlink" title="C# Notes"></a>C# Notes</h2><ul>
-<li>C# is case sensitive.</li>
-<li>All statements and expression must end with a semicolon (;).</li>
-<li>The program execution starts at the Main method.</li>
-<li>Unlike Java, program file name could be different from the class name.</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Introduction-of-C&quot;&gt;&lt;a href=&quot;#Introduction-of-C&quot; class=&quot;headerlink&quot; title=&quot;Introduction of C&quot;&gt;&lt;/a&gt;Introduction of C&lt;/h2&gt;&lt;p&gt;C# is desi
-    
-    </summary>
-    
-    
-      <category term="C#" scheme="http://xinghu0164.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>markdown-note</title>
-    <link href="http://xinghu0164.github.io/2017/06/20/markdown-note/"/>
-    <id>http://xinghu0164.github.io/2017/06/20/markdown-note/</id>
-    <published>2017-06-20T06:47:09.000Z</published>
-    <updated>2017-07-02T03:29:54.000Z</updated>
+    <link href="http://xinghu0164.github.io/2017/06/26/markdown-note/"/>
+    <id>http://xinghu0164.github.io/2017/06/26/markdown-note/</id>
+    <published>2017-06-26T06:47:09.000Z</published>
+    <updated>2017-07-03T14:18:50.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Introduction-of-Markdown"><a href="#Introduction-of-Markdown" class="headerlink" title="Introduction of Markdown"></a>Introduction of Markdown</h1><p>Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform. It’s written in what nerds like to call “plaintext”, which is exactly the sort of text you’re used to writing and seeing.</p>
 <h1 id="Syntax-guide"><a href="#Syntax-guide" class="headerlink" title="Syntax guide"></a>Syntax guide</h1><h4 id="Headers"><a href="#Headers" class="headerlink" title="Headers"></a>Headers</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># This is an &lt;h1&gt; tag</span></div><div class="line"><span class="comment">## This is an &lt;h2&gt; tag</span></div><div class="line"><span class="comment">###### This is an &lt;h6&gt; tag</span></div></pre></td></tr></table></figure>
@@ -424,6 +340,91 @@
     
     
       <category term="MarkDown" scheme="http://xinghu0164.github.io/tags/MarkDown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C# Study Note1</title>
+    <link href="http://xinghu0164.github.io/2017/06/24/C-L1/"/>
+    <id>http://xinghu0164.github.io/2017/06/24/C-L1/</id>
+    <published>2017-06-24T10:44:47.000Z</published>
+    <updated>2017-06-30T12:32:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Introduction-of-C"><a href="#Introduction-of-C" class="headerlink" title="Introduction of C"></a>Introduction of C</h2><p>C# is designed for Common Language Infrastructure (CLI), which consists of the executable code and runtime environment that allows use of various high-level languages on different computer platforms and architectures.</p>
+<h2 id="Reasons-make-C-a-widely-used-professional-language"><a href="#Reasons-make-C-a-widely-used-professional-language" class="headerlink" title="Reasons make C# a widely used professional language:"></a>Reasons make C# a widely used professional language:</h2><ul>
+<li>It is a modern, general-purpose programming language</li>
+<li>It is object oriented.</li>
+<li>It is component oriented.</li>
+<li>It is easy to learn.</li>
+<li>It is a structured language.</li>
+<li>It produces efficient programs.</li>
+<li>It can be compiled on a variety of computer platforms.</li>
+<li>It is a part of .Net Framework.</li>
+</ul>
+<h2 id="Important-features-of-C"><a href="#Important-features-of-C" class="headerlink" title="Important features of C"></a>Important features of C</h2><ul>
+<li>Boolean Conditions</li>
+<li>Automatic Garbage Collection</li>
+<li>Standard Library</li>
+<li>Assembly Versioning</li>
+<li>Properties and Events</li>
+<li>Delegates and Events Management</li>
+<li>Easy-to-use Generics</li>
+<li>Indexers</li>
+<li>Conditional Compilation</li>
+<li>Simple Multithreading</li>
+<li>LINQ and Lambda Expressions</li>
+<li>Integration with Windows</li>
+</ul>
+<h2 id="C-Notes"><a href="#C-Notes" class="headerlink" title="C# Notes"></a>C# Notes</h2><ul>
+<li>C# is case sensitive.</li>
+<li>All statements and expression must end with a semicolon (;).</li>
+<li>The program execution starts at the Main method.</li>
+<li>Unlike Java, program file name could be different from the class name.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Introduction-of-C&quot;&gt;&lt;a href=&quot;#Introduction-of-C&quot; class=&quot;headerlink&quot; title=&quot;Introduction of C&quot;&gt;&lt;/a&gt;Introduction of C&lt;/h2&gt;&lt;p&gt;C# is desi
+    
+    </summary>
+    
+    
+      <category term="C#" scheme="http://xinghu0164.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Introduction of Hexo</title>
+    <link href="http://xinghu0164.github.io/2017/06/20/Get-Start/"/>
+    <id>http://xinghu0164.github.io/2017/06/20/Get-Start/</id>
+    <published>2017-06-20T06:47:09.000Z</published>
+    <updated>2017-07-03T14:18:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Introduction-of-Website-Techniques"><a href="#Introduction-of-Website-Techniques" class="headerlink" title="Introduction of Website Techniques"></a>Introduction of Website Techniques</h1><p>This website build on <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> and Github Pages. </p>
+<p>Hexo is a fast, simple &amp; powerful blog framework. It is based on Node.JS and brings incredible generating speed. All features of GitHub Flavored Markdown are supported.</p>
+<p>GitHub Pages is a static site hosting service. It is designed to host personal, organization, or project pages directly from a GitHub repository.</p>
+<h2 id="Hexo-Quick-Start"><a href="#Hexo-Quick-Start" class="headerlink" title="Hexo Quick Start"></a>Hexo Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<h3 id="Create-a-page-and-its-index-post"><a href="#Create-a-page-and-its-index-post" class="headerlink" title="Create a page and its index post"></a>Create a page and its index post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">hexo new page <span class="string">"tags"</span></div></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<h3 id="Delete-a-post"><a href="#Delete-a-post" class="headerlink" title="Delete a post"></a>Delete a post</h3><ol>
+<li>delete the post under <em>source/_post</em> folder</li>
+<li>run following commands<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Introduction-of-Website-Techniques&quot;&gt;&lt;a href=&quot;#Introduction-of-Website-Techniques&quot; class=&quot;headerlink&quot; title=&quot;Introduction of Website 
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://xinghu0164.github.io/tags/Hexo/"/>
     
   </entry>
   
