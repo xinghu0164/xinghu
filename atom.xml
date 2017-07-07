@@ -268,7 +268,7 @@
     <link href="http://xinghu0164.github.io/2017/06/26/markdown-note/"/>
     <id>http://xinghu0164.github.io/2017/06/26/markdown-note/</id>
     <published>2017-06-26T06:47:09.000Z</published>
-    <updated>2017-07-04T09:37:56.000Z</updated>
+    <updated>2017-07-07T06:44:43.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Introduction-of-Markdown"><a href="#Introduction-of-Markdown" class="headerlink" title="Introduction of Markdown"></a>Introduction of Markdown</h1><p>Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform. It’s written in what nerds like to call “plaintext”, which is exactly the sort of text you’re used to writing and seeing.</p>
 <h1 id="Syntax-guide"><a href="#Syntax-guide" class="headerlink" title="Syntax guide"></a>Syntax guide</h1><h4 id="Headers"><a href="#Headers" class="headerlink" title="Headers"></a>Headers</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># This is an &lt;h1&gt; tag</span></div><div class="line"><span class="comment">## This is an &lt;h2&gt; tag</span></div><div class="line"><span class="comment">###### This is an &lt;h6&gt; tag</span></div></pre></td></tr></table></figure>
