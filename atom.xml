@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xinghu0164.github.io/"/>
-  <updated>2017-07-03T13:55:33.000Z</updated>
+  <updated>2017-07-11T06:50:40.000Z</updated>
   <id>http://xinghu0164.github.io/</id>
   
   <author>
@@ -16,11 +16,79 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Behavior Questions Preparation1</title>
+    <title>Behavior Questions Preparation 2</title>
+    <link href="http://xinghu0164.github.io/2017/07/11/hebaviorquestion2/"/>
+    <id>http://xinghu0164.github.io/2017/07/11/hebaviorquestion2/</id>
+    <published>2017-07-11T06:48:28.000Z</published>
+    <updated>2017-07-11T06:50:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Common-Behavior-Questions-2"><a href="#Common-Behavior-Questions-2" class="headerlink" title="Common Behavior Questions 2"></a>Common Behavior Questions 2</h2><h3 id="1-Why-did-you-apply-for-the-AEMO-Graduate-Development-Program"><a href="#1-Why-did-you-apply-for-the-AEMO-Graduate-Development-Program" class="headerlink" title="1. Why did you apply for the AEMO Graduate Development Program?"></a>1. Why did you apply for the AEMO Graduate Development Program?</h3><h3 id="2-What-relevant-technical-skills-knowledge-and-experience-can-you-bring-to-a-Graduate-role-at-AEMO"><a href="#2-What-relevant-technical-skills-knowledge-and-experience-can-you-bring-to-a-Graduate-role-at-AEMO" class="headerlink" title="2. What relevant technical skills, knowledge and experience can you bring to a Graduate role at AEMO?"></a>2. What relevant technical skills, knowledge and experience can you bring to a Graduate role at AEMO?</h3><h3 id="3-What-personal-strengths-values-and-or-attributes-will-ensure-your-success-at-AEMO"><a href="#3-What-personal-strengths-values-and-or-attributes-will-ensure-your-success-at-AEMO" class="headerlink" title="3. What personal strengths, values and/or attributes will ensure your success at AEMO?"></a>3. What personal strengths, values and/or attributes will ensure your success at AEMO?</h3><h3 id="4-If-you-could-ask-our-CEO-one-question-what-would-it-be"><a href="#4-If-you-could-ask-our-CEO-one-question-what-would-it-be" class="headerlink" title="4. If you could ask our CEO one question, what would it be?"></a>4. If you could ask our CEO one question, what would it be?</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Common-Behavior-Questions-2&quot;&gt;&lt;a href=&quot;#Common-Behavior-Questions-2&quot; class=&quot;headerlink&quot; title=&quot;Common Behavior Questions 2&quot;&gt;&lt;/a&gt;Commo
+    
+    </summary>
+    
+    
+      <category term="Behavior Questions" scheme="http://xinghu0164.github.io/tags/Behavior-Questions/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.JS Study Notes1</title>
+    <link href="http://xinghu0164.github.io/2017/07/07/nodejs1/"/>
+    <id>http://xinghu0164.github.io/2017/07/07/nodejs1/</id>
+    <published>2017-07-07T06:51:44.000Z</published>
+    <updated>2017-07-07T06:53:18.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Node.JS" scheme="http://xinghu0164.github.io/tags/Node-JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript Study Notes1</title>
+    <link href="http://xinghu0164.github.io/2017/07/07/js1/"/>
+    <id>http://xinghu0164.github.io/2017/07/07/js1/</id>
+    <published>2017-07-07T06:51:31.000Z</published>
+    <updated>2017-07-07T06:52:09.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://xinghu0164.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C# Study Note3</title>
+    <link href="http://xinghu0164.github.io/2017/07/07/C-L3/"/>
+    <id>http://xinghu0164.github.io/2017/07/07/C-L3/</id>
+    <published>2017-07-07T06:50:24.000Z</published>
+    <updated>2017-07-07T06:51:14.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="C#" scheme="http://xinghu0164.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Behavior Questions Preparation 1</title>
     <link href="http://xinghu0164.github.io/2017/07/03/behaviorquestion/"/>
     <id>http://xinghu0164.github.io/2017/07/03/behaviorquestion/</id>
     <published>2017-07-03T13:33:05.000Z</published>
-    <updated>2017-07-03T13:55:33.000Z</updated>
+    <updated>2017-07-11T06:48:44.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Common-Behavior-Questions"><a href="#Common-Behavior-Questions" class="headerlink" title="Common Behavior Questions"></a>Common Behavior Questions</h2><h3 id="1-Introduce-yourself-Tell-us-about-yourself"><a href="#1-Introduce-yourself-Tell-us-about-yourself" class="headerlink" title="1. Introduce yourself (Tell us about yourself)"></a>1. Introduce yourself (Tell us about yourself)</h3><h3 id="2-What-interests-you-about-this-job-Why-you-apply-this-job-And-Why-hire-you"><a href="#2-What-interests-you-about-this-job-Why-you-apply-this-job-And-Why-hire-you" class="headerlink" title="2. What interests you about this job? Why you apply this job? And Why hire you?"></a>2. What interests you about this job? Why you apply this job? And Why hire you?</h3><h3 id="3-Describe-a-project-you-have-done-and-describe-your-role-and-responsibility-in-that-project"><a href="#3-Describe-a-project-you-have-done-and-describe-your-role-and-responsibility-in-that-project" class="headerlink" title="3. Describe a project you have done, and describe your role and responsibility in that project"></a>3. Describe a project you have done, and describe your role and responsibility in that project</h3><h3 id="4-What-are-your-strong-points"><a href="#4-What-are-your-strong-points" class="headerlink" title="4. What are your strong points?"></a>4. What are your strong points?</h3><h3 id="5-What-is-your-top-3-skills"><a href="#5-What-is-your-top-3-skills" class="headerlink" title="5. What is your top 3 skills?"></a>5. What is your top 3 skills?</h3><h3 id="6-What-is-your-weakness-And-how-would-you-like-to-improve"><a href="#6-What-is-your-weakness-And-how-would-you-like-to-improve" class="headerlink" title="6. What is your weakness? And how would you like to improve?"></a>6. What is your weakness? And how would you like to improve?</h3><h3 id="7-What-is-your-career-goal-Imagine-yourself-in-10-years-and-then-tell-us-what-you-would-look-like-in-10-years-what-kind-of-job-position"><a href="#7-What-is-your-career-goal-Imagine-yourself-in-10-years-and-then-tell-us-what-you-would-look-like-in-10-years-what-kind-of-job-position" class="headerlink" title="7. What is your career goal? (Imagine yourself in 10 years, and then tell us what you would look like in 10 years, what kind of job? position?)"></a>7. What is your career goal? (Imagine yourself in 10 years, and then tell us what you would look like in 10 years, what kind of job? position?)</h3><h3 id="8-Describe-a-challenge-you-have-met"><a href="#8-Describe-a-challenge-you-have-met" class="headerlink" title="8. Describe a challenge you have met"></a>8. Describe a challenge you have met</h3><h3 id="9-Describe-a-change-you-have-met-and-how-you-handle-it"><a href="#9-Describe-a-change-you-have-met-and-how-you-handle-it" class="headerlink" title="9. Describe a change you have met and how you handle it"></a>9. Describe a change you have met and how you handle it</h3><h3 id="10-Describe-a-conflit-you-have-met-ahe-how-you-handle-it"><a href="#10-Describe-a-conflit-you-have-met-ahe-how-you-handle-it" class="headerlink" title="10. Describe a conflit you have met ahe how you handle it"></a>10. Describe a conflit you have met ahe how you handle it</h3><h3 id="11-How-would-you-like-to-handle-stree-and-pressure"><a href="#11-How-would-you-like-to-handle-stree-and-pressure" class="headerlink" title="11. How would you like to handle stree and pressure?"></a>11. How would you like to handle stree and pressure?</h3>]]></content>
     
