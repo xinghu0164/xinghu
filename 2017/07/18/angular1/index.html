@@ -194,22 +194,30 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h1 id="AngularJS-Basic-Concepts"><a href="#AngularJS-Basic-Concepts" class="headerlink" title="AngularJS Basic Concepts"></a>AngularJS Basic Concepts</h1><h2 id="JS-Framework"><a href="#JS-Framework" class="headerlink" title="JS Framework"></a>JS Framework</h2><p>AngularJS is a JavaScript framework. It is a library written in JavaScript.</p>
-<p>AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+                <h2 id="JS-Framework"><a href="#JS-Framework" class="headerlink" title="JS Framework"></a>JS Framework</h2><p>AngularJS is a JavaScript framework. It is a library written in JavaScript.</p>
+<p>AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <h2 id="Important-Concepts"><a href="#Important-Concepts" class="headerlink" title="Important Concepts"></a>Important Concepts</h2><p>AngularJS extends HTML with <strong>ng-directives</strong>.</p>
 <p>The <strong>ng-app</strong> directive defines an AngularJS application.</p>
 <p>The <strong>ng-model</strong> directive binds the value of HTML controls (input, select, textarea) to application data.</p>
-<p>The <strong>ng-bind</strong> directive binds application data to the HTML view.<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;div ng-app=&quot;&quot;&gt;</div><div class="line">  &lt;p&gt;Name: &lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;&lt;/p&gt;</div><div class="line">  &lt;p ng-bind=&quot;name&quot;&gt;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
-<p>The <strong>ng-init</strong> directive initializes AngularJS application variables.<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div ng-app=&quot;&quot; ng-init=&quot;firstName=&apos;John&apos;&quot;&gt;</div><div class="line"></div><div class="line">&lt;p&gt;The name is &lt;span ng-bind=&quot;firstName&quot;&gt;&lt;/span&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>The <strong>ng-bind</strong> directive binds application data to the HTML view.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;div ng-app=&quot;&quot;&gt;</div><div class="line">  &lt;p&gt;Name: &lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;&lt;/p&gt;</div><div class="line">  &lt;p ng-bind=&quot;name&quot;&gt;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>The <strong>ng-init</strong> directive initializes AngularJS application variables.<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div ng-app=&quot;&quot; ng-init=&quot;firstName=&apos;John&apos;&quot;&gt;</div><div class="line"></div><div class="line">&lt;p&gt;The name is &lt;span ng-bind=&quot;firstName&quot;&gt;&lt;/span&gt;&lt;/p&gt;</div><div class="line">&lt;p&gt;The name is also as &#123;&#123;firstName&#125;&#125;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 <h2 id="Expressions"><a href="#Expressions" class="headerlink" title="Expressions"></a>Expressions</h2><p>AngularJS expressions are written inside double braces: .<br>AngularJS expressions bind AngularJS data to HTML the same way as the <strong>ng-bind</strong> directive.</p>
 <h2 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h2><p>AngularJS <strong>modules</strong> define AngularJS applications.</p>
 <p>AngularJS <strong>controllers</strong> control AngularJS applications.</p>
 <p>The <strong>ng-app</strong> directive defines the application, the <strong>ng-controller</strong> directive defines the controller.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;div ng-app=&quot;myApp&quot; ng-controller=&quot;myCtrl&quot;&gt;</div><div class="line"></div><div class="line">First Name: &lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;&lt;br&gt;</div><div class="line">Last Name: &lt;input type=&quot;text&quot; ng-model=&quot;lastName&quot;&gt;&lt;br&gt;</div><div class="line">&lt;br&gt;</div><div class="line">Full Name: &#123;&#123;firstName + &quot; &quot; + lastName&#125;&#125;</div><div class="line"></div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var app = angular.module(&apos;myApp&apos;, []);</div><div class="line">app.controller(&apos;myCtrl&apos;, function($scope) &#123;</div><div class="line">    $scope.firstName= &quot;John&quot;;</div><div class="line">    $scope.lastName= &quot;Doe&quot;;</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+
                 <hr>
                 
 
                 <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2017/07/19/angular2/" data-toggle="tooltip" data-placement="top"
+                           title="AngularJS Study Notes 2">&larr; Previous Post</a>
+                    </li>
                     
                     
                     <li class="next">
@@ -230,7 +238,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AngularJS-Basic-Concepts"><span class="toc-text">AngularJS Basic Concepts</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS-Framework"><span class="toc-text">JS Framework</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Important-Concepts"><span class="toc-text">Important Concepts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Expressions"><span class="toc-text">Expressions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Applications"><span class="toc-text">Applications</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS-Framework"><span class="toc-text">JS Framework</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Important-Concepts"><span class="toc-text">Important Concepts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Expressions"><span class="toc-text">Expressions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Applications"><span class="toc-text">Applications</span></a></li></ol>
                 </div>
             </div>
         </div>
