@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xinghu0164.github.io/"/>
-  <updated>2017-08-01T00:47:25.000Z</updated>
+  <updated>2017-08-01T01:38:43.000Z</updated>
   <id>http://xinghu0164.github.io/</id>
   
   <author>
@@ -16,15 +16,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Async functions - making promises friendly</title>
+    <link href="http://xinghu0164.github.io/2017/08/01/AsynchFunction/"/>
+    <id>http://xinghu0164.github.io/2017/08/01/AsynchFunction/</id>
+    <published>2017-08-01T01:12:10.000Z</published>
+    <updated>2017-08-01T01:38:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="What-is-asynchronized-function"><a href="#What-is-asynchronized-function" class="headerlink" title="What is asynchronized function?"></a>What is asynchronized function?</h2><p>Async functions allow you to write promise-based code as if it were synchronous, but without blocking the main thread. They make your asynchronous code less “clever” and more readable.</p>
+<p><strong>Async functions always return a promise, whether you use await or not.</strong> That promise resolves with whatever the async function returns, or rejects with whatever the async function throws.</p>
+<h3 id="异步过程"><a href="#异步过程" class="headerlink" title="异步过程"></a>异步过程</h3><p>异步函数实际上很快就调用完成了。但是后面还有工作线程执行异步任务、通知主线程、主线程调用回调函数等很多步骤。我们把整个过程叫做异步过程。异步函数的调用在整个异步过程中，只是一小部分。</p>
+<p>一个异步过程通常是这样的：<br>主线程发起一个异步请求，相应的工作线程接收请求并告知主线程已收到(异步函数返回)；主线程可以继续执行后面的代码，同时工作线程执行异步任务；工作线程完成工作后，通知主线程；主线程收到通知后，执行一定的动作(调用回调函数)。</p>
+<p>异步函数通常具有以下的形式：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">A(args..., callbackFn)</div></pre></td></tr></table></figure></p>
+<p>从主线程的角度看，一个异步过程包括下面两个要素：</p>
+<ul>
+<li>发起函数(或叫注册函数)A</li>
+<li>回调函数callbackFn<br>它们都是在主线程上调用的，其中注册函数用来发起异步过程，回调函数用来处理结果。</li>
+</ul>
+<p>// 注意：前面说的形式A(args…, callbackFn)只是一种抽象的表示，并不代表回调函数一定要作为发起函数的参数，例如：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">var xhr = new XMLHttpRequest();</div><div class="line">xhr.onreadystatechange = xxx; // 添加回调函数</div><div class="line">xhr.open(&apos;GET&apos;, url);</div><div class="line">xhr.send(); // 发起函数</div><div class="line">发起函数和回调函数就是分离的。</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;What-is-asynchronized-function&quot;&gt;&lt;a href=&quot;#What-is-asynchronized-function&quot; class=&quot;headerlink&quot; title=&quot;What is asynchronized function?&quot;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://xinghu0164.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>What is Promise in JavaScript</title>
     <link href="http://xinghu0164.github.io/2017/08/01/js-promise/"/>
     <id>http://xinghu0164.github.io/2017/08/01/js-promise/</id>
     <published>2017-08-01T00:36:39.000Z</published>
-    <updated>2017-08-01T00:47:25.000Z</updated>
+    <updated>2017-08-01T01:46:57.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="What-is-a-Promise"><a href="#What-is-a-Promise" class="headerlink" title="What is a Promise?"></a>What is a Promise?</h2><p><strong>A promise is an object that may produce a single value some time in the future</strong>: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). </p>
-<p>A promise may be in one of 3 possible states: <em>fulfilled, rejected, or pending</em>.</p>
+<p>A promise may be in one of 3 possible states: <em>fulfilled(resolved), rejected, or pending</em>.</p>
 <p>A promise is an object which can be returned synchronously from an asynchronous function. 有了 Promise 对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。此外，Promise 对象提供统一的接口，使得控制异步操作更加容易。 </p>
+<p>A promise is settled if it’s not pending (it has been resolved or rejected). Sometimes people use resolved and settled to mean the same thing: not pending.</p>
+<p>Once settled, a promise can not be resettled. Calling resolve() or reject() again will have no effect. The immutability of a settled promise is an important feature.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>All spec-compatible promises define a <em>.then()</em> method which you use to pass handlers which can take the resolved or rejected value.<br>.then() must return a new promise, promise2.<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">promise.then(</div><div class="line">  onFulfilled?: Function,</div><div class="line">  onRejected?: Function</div><div class="line">) =&gt; Promise</div></pre></td></tr></table></figure></p>
+<p> Example:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">// wait(3000) call will wait 3000ms (3 seconds), and then log &apos;Hello!&apos;</div><div class="line">const wait = time =&gt; new Promise((resolve) =&gt; setTimeout(resolve, time));</div><div class="line"></div><div class="line">wait(3000).then(() =&gt; console.log(&apos;Hello!&apos;)); // &apos;Hello!&apos;</div></pre></td></tr></table></figure></p>
+<h2 id="Important-Promise-Rules"><a href="#Important-Promise-Rules" class="headerlink" title="Important Promise Rules"></a>Important Promise Rules</h2><p>A standard for promises was defined by the Promises/A+ specification community. There are many implementations which conform to the standard, including the JavaScript standard ECMAScript promises.</p>
+<p>Promises following the spec must follow a specific set of rules:</p>
+<ul>
+<li>A promise or “thenable” is an object that supplies a standard-compliant .then() method.</li>
+<li>A pending promise may transition into a fulfilled or rejected state.</li>
+<li>A fulfilled or rejected promise is settled, and must not transition into any other state.</li>
+<li>Once a promise is settled, it must have a value (which may be undefined). That value must not change.</li>
+</ul>
+<p>Change in this context refers to identity (===) comparison. An object may be used as the fulfilled value, and object properties may mutate.</p>
 ]]></content>
     
     <summary type="html">
