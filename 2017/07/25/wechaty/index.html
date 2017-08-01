@@ -86,19 +86,19 @@
 						
                     
                         
-                    
-                        
 							
                         <li>
-                            <a href="/resume/">Resume</a>
+                            <a href="/tags/">tags</a>
                         </li>
 							
 						
                     
                         
+                    
+                        
 							
                         <li>
-                            <a href="/tags/">tags</a>
+                            <a href="/resume/">Resume</a>
                         </li>
 							
 						
@@ -194,11 +194,226 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                
+                <h2 id="Events"><a href="#Events" class="headerlink" title="Events:"></a>Events:</h2><ul>
+<li>scan: Emit when the bot needs to show you a QR Code for scanning</li>
+<li>login: Emit when bot login is fully successful.</li>
+<li>logout: Emit when bot detects log out.</li>
+<li>message: Emit when there’s a new message.</li>
+<li>error: Emit when an error occurs.</li>
+<li>friend: Emit when a new friend request is received, or friendship is confirmed.</li>
+<li>room-join: Emit when someone joins the room</li>
+<li>room-leave: Emit when someone leaves the room</li>
+<li>room-topic: Emit when someone changes the room’s topic</li>
+</ul>
+<h2 id="Main-Classes"><a href="#Main-Classes" class="headerlink" title="Main Classes"></a>Main Classes</h2><ul>
+<li>Wechaty</li>
+<li>Message</li>
+<li>Contact</li>
+<li>Room</li>
+<li>FriendRequest</li>
+<li>MediaMessage</li>
+</ul>
+<h2 id="Classes-Details"><a href="#Classes-Details" class="headerlink" title="Classes Details"></a>Classes Details</h2><h3 id="1-Wechaty-Class"><a href="#1-Wechaty-Class" class="headerlink" title="1.Wechaty Class"></a>1.Wechaty Class</h3><p>Main bot class.</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Wechaty &#125; <span class="keyword">from</span> <span class="string">'wechaty'</span></div></pre></td></tr></table></figure>
+<h4 id="1-1-Wechaty-instance-profile-string-Wechaty"><a href="#1-1-Wechaty-instance-profile-string-Wechaty" class="headerlink" title="1.1 Wechaty.instance(profile:string): Wechaty"></a>1.1 Wechaty.instance(profile:string): Wechaty</h4><p>Create a bot instance</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> bot = Wechaty.instance(&#123;</div><div class="line">  profile: <span class="string">'my-bot'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h4 id="1-2-Wechaty-init-Wechaty"><a href="#1-2-Wechaty-init-Wechaty" class="headerlink" title="1.2  Wechaty.init(): Wechaty"></a>1.2  Wechaty.init(): Wechaty</h4><p>Initialize the bot, return Promise.</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line">wechaty.init()</div><div class="line">.then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="comment">// do other stuff with bot here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="1-3-Wechaty-say-content-string"><a href="#1-3-Wechaty-say-content-string" class="headerlink" title="1.3 Wechaty.say(content: string)"></a>1.3 Wechaty.say(content: string)</h4><p><code>Wechaty</code> is <code>Sayable</code>, this method will send message to <code>filehelper</code>, just for logging/reporting usage for your convenience</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line">wechaty.say(<span class="string">'hello'</span>)</div></pre></td></tr></table></figure>
+<h3 id="2-Message-Class"><a href="#2-Message-Class" class="headerlink" title="2 Message Class"></a>2 Message Class</h3><p>All wechat messages will be encapsulated as a Message.</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Message &#125; <span class="keyword">from</span> <span class="string">'wechaty'</span></div></pre></td></tr></table></figure>
+<p><code>Message</code> is <code>Sayable</code></p>
+<h3 id="Message-from-contact-Contact-string-Contact"><a href="#Message-from-contact-Contact-string-Contact" class="headerlink" title="Message.from(contact?: Contact|string): Contact"></a>Message.from(contact?: Contact|string): Contact</h3><p>Get the sender from a message, or set it.</p>
+<h4 id="1-Message-from-Contact"><a href="#1-Message-from-Contact" class="headerlink" title="1. Message.from(): Contact"></a>1. Message.from(): Contact</h4><p>Get the sender from a message.</p>
+<h4 id="2-Message-from-contact-Contact-void"><a href="#2-Message-from-contact-Contact-void" class="headerlink" title="2. Message.from(contact: Contact): void"></a>2. Message.from(contact: Contact): void</h4><p>Set a sender to the message</p>
+<h4 id="3-Message-from-contactId-string-void"><a href="#3-Message-from-contactId-string-void" class="headerlink" title="3. Message.from(contactId: string): void"></a>3. Message.from(contactId: string): void</h4><p>Set a sender to the message by contact id</p>
+<h3 id="Message-to-contact-Contact-string-Contact-void"><a href="#Message-to-contact-Contact-string-Contact-void" class="headerlink" title="Message.to(contact?: Contact|string): Contact|void"></a>Message.to(contact?: Contact|string): Contact|void</h3><p>Get the receiver from a message, or set it. </p>
+<p>Only deal with Contact, if you need Room, try Message.room()</p>
+<h4 id="1-Message-to-Contact"><a href="#1-Message-to-Contact" class="headerlink" title="1. Message.to(): Contact"></a>1. Message.to(): Contact</h4><p>Get the destination of the message</p>
+<p>Message.to() will return null if a message is in a room, use Message.room() to get the room.</p>
+<h4 id="2-Message-to-contact-Contact-void"><a href="#2-Message-to-contact-Contact-void" class="headerlink" title="2. Message.to(contact: Contact): void"></a>2. Message.to(contact: Contact): void</h4><p>Set the destination as Contact for the message</p>
+<h4 id="3-Message-to-contact-string-void"><a href="#3-Message-to-contact-string-void" class="headerlink" title="3. Message.to(contact: string): void"></a>3. Message.to(contact: string): void</h4><p>Set the destination as Contact by ‘weixin’, for the message</p>
+<h3 id="Message-content-content-string-string"><a href="#Message-content-content-string-string" class="headerlink" title="Message.content(content?: string): string"></a>Message.content(content?: string): string</h3><p>Get the content from a message, or set it.</p>
+<h4 id="1-Message-content-string"><a href="#1-Message-content-string" class="headerlink" title="1. Message.content(): string"></a>1. Message.content(): string</h4><p>Get the content of the message</p>
+<h4 id="2-Message-content-content-string-string"><a href="#2-Message-content-content-string-string" class="headerlink" title="2. Message.content(content: string): string"></a>2. Message.content(content: string): string</h4><p>Set the content for the message</p>
+<h3 id="Message-room-room-Room-string-Room-void"><a href="#Message-room-room-Room-string-Room-void" class="headerlink" title="Message.room(room?: Room|string): Room|void"></a>Message.room(room?: Room|string): Room|void</h3><p>Get the room from a message, or set it.</p>
+<h4 id="1-Message-room-Room-null"><a href="#1-Message-room-Room-null" class="headerlink" title="1. Message.room(): Room | null"></a>1. Message.room(): Room | null</h4><p>Get the room from the message. </p>
+<p>If the message is not in a room, then will return <code>null</code></p>
+<h4 id="2-Message-room-room-Room-void"><a href="#2-Message-room-room-Room-void" class="headerlink" title="2. Message.room(room: Room): void"></a>2. Message.room(room: Room): void</h4><p>Set the room for a message</p>
+<h4 id="3-Message-room-roomId-string-void"><a href="#3-Message-room-roomId-string-void" class="headerlink" title="3. Message.room(roomId: string): void"></a>3. Message.room(roomId: string): void</h4><p>Set the room by id for a message</p>
+<h3 id="Message-type-MsgType"><a href="#Message-type-MsgType" class="headerlink" title="Message.type(): MsgType"></a>Message.type(): MsgType</h3><p>Get the type from the message.</p>
+<p>Some known value of the type list here is:</p>
+<ul>
+<li>TEXT               1  </li>
+<li>IMAGE              3     </li>
+<li>VOICE              34    </li>
+<li>VERIFYMSG          37</li>
+<li>POSSIBLEFRIEND_MSG 40</li>
+<li>SHARECARD          42</li>
+<li>VIDEO              43</li>
+<li>EMOTICON           47</li>
+<li>LOCATION           48</li>
+<li>APP                49</li>
+<li>VOIPMSG            50</li>
+<li>STATUSNOTIFY       51</li>
+<li>VOIPNOTIFY         52</li>
+<li>VOIPINVITE         53</li>
+<li>MICROVIDEO         62    </li>
+<li>APP                49   </li>
+<li>SYSNOTICE          9999 </li>
+<li>SYS                10000 </li>
+<li>RECALLED           10002</li>
+</ul>
+<h3 id="Message-typeApp-AppMsgType"><a href="#Message-typeApp-AppMsgType" class="headerlink" title="Message.typeApp(): AppMsgType"></a>Message.typeApp(): AppMsgType</h3><p>Get the app type from message, if not apptype, return 0</p>
+<p>Some known value of the type list here is:</p>
+<ul>
+<li>TEXT                      1</li>
+<li>IMG                       2</li>
+<li>AUDIO                     3</li>
+<li>VIDEO                     4</li>
+<li>URL                       5</li>
+<li>ATTACH                    6</li>
+<li>OPEN                      7</li>
+<li>EMOJI                     8</li>
+<li>VOICE_REMIND              9</li>
+<li>SCAN_GOOD                 10</li>
+<li>GOOD                      13</li>
+<li>EMOTION                   15</li>
+<li>CARD_TICKET               16</li>
+<li>REALTIME_SHARE_LOCATION   17</li>
+<li>TRANSFERS                 2e3</li>
+<li>RED_ENVELOPES             2001</li>
+<li>READER_TYPE               100001</li>
+</ul>
+<h3 id="Message-say-content-string-Promise"><a href="#Message-say-content-string-Promise" class="headerlink" title="Message.say(content: string): Promise"></a>Message.say(content: string): Promise<void></void></h3><p>Reply a message to the sender.</p>
+<h3 id="Message-mentioned-Contact"><a href="#Message-mentioned-Contact" class="headerlink" title="Message.mentioned(): Contact[]"></a>Message.mentioned(): Contact[]</h3><p>Return a contactlist which this message is mentioned for?</p>
+<p>If the message is “@Botself bla…”, then the mention() will return a contactlist contains just bot self contact.</p>
+<p>If the message is “@other_user bar…”, then the mention() will return a contact for the “other_user”.</p>
+<p>If no one was mentioned we return []. (contact.mention().length)</p>
+<p>About <code>@</code> blank in Wechat: It use special char with unicode code <code>8197</code> to indetify <code>real@</code></p>
+<h3 id="Message-self-message-Message-boolean"><a href="#Message-self-message-Message-boolean" class="headerlink" title="Message.self(message: Message): boolean"></a>Message.self(message: Message): boolean</h3><p>Check if a message is sent by self.</p>
+<p>Return <code>true</code> for send from self, <code>false</code> for send from others.</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> (message.self()) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'this message is sent by myself!'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Message-id-string"><a href="#Message-id-string" class="headerlink" title="Message.id: string"></a>Message.id: string</h3><p>Get the id from a message</p>
+<h3 id="Message-filename-string"><a href="#Message-filename-string" class="headerlink" title="Message.filename():string"></a>Message.filename():string</h3><p>Get the filename from a media message, if not media message, throw Error</p>
+<h2 id="Contact-Class"><a href="#Contact-Class" class="headerlink" title="Contact Class"></a>Contact Class</h2><figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Contact &#125; <span class="keyword">from</span> <span class="string">'wechaty'</span></div></pre></td></tr></table></figure>
+<p><code>Contact</code> is <code>Sayable</code></p>
+<h3 id="Contact-id-string"><a href="#Contact-id-string" class="headerlink" title="Contact.id: string"></a>Contact.id: string</h3><p>Uniq id</p>
+<h3 id="Contact-name-string-‘’"><a href="#Contact-name-string-‘’" class="headerlink" title="Contact.name(): string | ‘’"></a>Contact.name(): string | ‘’</h3><p>Get the name from a contact</p>
+<h3 id="Contact-city-string-undefined"><a href="#Contact-city-string-undefined" class="headerlink" title="Contact.city(): string | undefined"></a>Contact.city(): string | undefined</h3><p>Get the region ‘city’ from a contact</p>
+<h3 id="Contact-province-string-undefined"><a href="#Contact-province-string-undefined" class="headerlink" title="Contact.province(): string | undefined"></a>Contact.province(): string | undefined</h3><p>Get the region ‘province’ from a contact</p>
+<h3 id="Contact-gender-Gender-undefine"><a href="#Contact-gender-Gender-undefine" class="headerlink" title="Contact.gender(): Gender | undefine"></a>Contact.gender(): Gender | undefine</h3><p>Get the gender from a contact: </p>
+<ul>
+<li>Unknown = 0,</li>
+<li>Male    = 1,</li>
+<li>Female  = 2,</li>
+</ul>
+<h3 id="Contact-avatar"><a href="#Contact-avatar" class="headerlink" title="Contact.avatar():"></a>Contact.avatar():</h3><p>Save avatar to file, simple code as follows: (save contact avator to file <code>${contact.name()}.jpg</code>)</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line"><span class="comment">// contact: Contact</span></div><div class="line"><span class="keyword">const</span> avatarFileName = <span class="string">`<span class="subst">$&#123;contact.name()&#125;</span>.jpg`</span></div><div class="line"><span class="keyword">const</span> avatarReadStream = <span class="keyword">await</span> contact.avatar()</div><div class="line"><span class="keyword">const</span> avatarWriteStream = createWriteStream(avatarFileName)</div><div class="line">avatarReadStream.pipe(avatarWriteStream)</div></pre></td></tr></table></figure>
+<h3 id="Contact-alias-string-null"><a href="#Contact-alias-string-null" class="headerlink" title="Contact.alias(): string | null"></a>Contact.alias(): string | null</h3><p>Get the alias name from a contact</p>
+<h3 id="Contact-alias-alias-string-Promise"><a href="#Contact-alias-alias-string-Promise" class="headerlink" title="Contact.alias(alias: string): Promise"></a>Contact.alias(alias: string): Promise<boolean></boolean></h3><p>Set alias name to a contact</p>
+<p>Return a Promise<boolean>, true for modified successful, false for failure.</boolean></p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> ret = <span class="keyword">await</span> contact.alias(<span class="string">"newAlias"</span>)</div><div class="line">  <span class="keyword">if</span> (ret) &#123; </div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'set alias successfulyy!'</span>)</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">console</span>.error(<span class="string">'failed to set alias'</span>) </div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>use <code>Contact.alias(null)</code> to clear alias</p>
+<h3 id="Contact-weixin-string-‘’"><a href="#Contact-weixin-string-‘’" class="headerlink" title="Contact.weixin(): string | ‘’"></a>Contact.weixin(): string | ‘’</h3><p>Get the weixin number from a contact, </p>
+<p>Sometimes cannot get weixin number due to weixin security mechanism, not recommend.</p>
+<h3 id="Contact-star-boolean"><a href="#Contact-star-boolean" class="headerlink" title="Contact.star(): boolean"></a>Contact.star(): boolean</h3><p>Check it the contact is star contact.</p>
+<p>True for star friend, False for no star friend</p>
+<h3 id="Contact-refresh-Promise"><a href="#Contact-refresh-Promise" class="headerlink" title="Contact.refresh(): Promise"></a>Contact.refresh(): Promise<this></this></h3><p>Force reload data for Contact</p>
+<h3 id="Contact-self-boolean"><a href="#Contact-self-boolean" class="headerlink" title="Contact.self(): boolean"></a>Contact.self(): boolean</h3><p>Check if contact is self</p>
+<p>True for contact is self, False for contact is others</p>
+<h3 id="Contact-stranger-boolean"><a href="#Contact-stranger-boolean" class="headerlink" title="Contact.stranger(): boolean"></a>Contact.stranger(): boolean</h3><p>Check if contact is strange</p>
+<p>True for not friend of the bot, False for friend of the bot</p>
+<h3 id="Contact-say-content-string-Promise"><a href="#Contact-say-content-string-Promise" class="headerlink" title="Contact.say(content: string): Promise"></a>Contact.say(content: string): Promise<void></void></h3><p>Say <code>content</code> to Contact</p>
+<h3 id="Contact-Query-Type"><a href="#Contact-Query-Type" class="headerlink" title="Contact Query Type"></a>Contact Query Type</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">type</span> Query = &#123;</div><div class="line">  name?: <span class="built_in">string</span> | <span class="built_in">RegExp</span></div><div class="line">  alias?: <span class="built_in">string</span> | <span class="built_in">RegExp</span></div><div class="line">&#125;</div><div class="line">Contact.find(query : Query) : Contact | <span class="literal">null</span></div><div class="line">Contact.findAll(query : Query) : Contact[]</div></pre></td></tr></table></figure>
+<h3 id="static-Contact-find-query-Query-Promise"><a href="#static-Contact-find-query-Query-Promise" class="headerlink" title="static Contact.find(query: Query): Promise"></a>static Contact.find(query: Query): Promise</h3><p>Find contact by name or alias, if the result more than one, return the first one.</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> contactFindByName = <span class="keyword">await</span> Contact.find(&#123; name:<span class="string">"ContactName"</span>&#125; ) </div><div class="line"><span class="keyword">const</span> contactFindByAlias = <span class="keyword">await</span> Contact.find(&#123; alias:<span class="string">"ContactAlias"</span>&#125; )</div></pre></td></tr></table></figure>
+<h3 id="static-Contact-findAll-query-Query-Promise"><a href="#static-Contact-findAll-query-Query-Promise" class="headerlink" title="static Contact.findAll(query: Query): Promise"></a>static Contact.findAll(query: Query): Promise</h3><p>Find contact by alias or name, return all the match contact   </p>
+<p>If use <code>Contact.findAll()</code> get the contact list of the bot.</p>
+<h2 id="Class-Room"><a href="#Class-Room" class="headerlink" title="Class Room"></a>Class Room</h2><figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Room &#125; <span class="keyword">from</span> <span class="string">'wechaty'</span></div></pre></td></tr></table></figure>
+<p><code>Room</code> is <code>Sayable</code></p>
+<p>Doc is cheap, show you code: <a href="https://github.com/wechaty/wechaty/blob/master/example/room-bot.ts" target="_blank" rel="external">Example/Room-Bot</a></p>
+<h3 id="Room-say-content-string-replyTo-Contact-Contact-Promise"><a href="#Room-say-content-string-replyTo-Contact-Contact-Promise" class="headerlink" title="Room.say(content: string, replyTo: Contact|Contact[]): Promise"></a>Room.say(content: string, replyTo: Contact|Contact[]): Promise<void></void></h3><p>Say <code>content</code> inside Room.</p>
+<p>If you set <code>replyTo</code>, then <code>say()</code> will mention them as well.</p>
+<blockquote>
+<p>“@replyTo content”</p>
+</blockquote>
+<h3 id="Room-refresh-Promise"><a href="#Room-refresh-Promise" class="headerlink" title="Room.refresh(): Promise"></a>Room.refresh(): Promise<room></room></h3><p>Force reload data for Room</p>
+<h3 id="Room-Events"><a href="#Room-Events" class="headerlink" title="Room Events"></a>Room Events</h3><p><code>this</code> is <code>Sayable</code> for all listeners.</p>
+<p>Which means there will be a <code>this.say()</code> the method inside listener call, you can use it sending a message to <code>filehelper</code>, just for logging/reporting usage for your convenience.</p>
+<h4 id="Event-join"><a href="#Event-join" class="headerlink" title="Event: join"></a>Event: <code>join</code></h4><figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line">Room.on(<span class="string">'join'</span>, <span class="function">(<span class="params"><span class="keyword">this</span>: Room, inviteeList: Contact[], inviter: Contact</span>) =&gt;</span> <span class="built_in">void</span>)</div></pre></td></tr></table></figure>
+<p>Event <code>join</code>: Room New Member</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line">room.on(<span class="string">'join'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">inviteeList, inviter</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`the room <span class="subst">$&#123;room.topic()&#125;</span>, got new members invited by <span class="subst">$&#123;inviter.name()&#125;</span>`</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h4 id="Event-leave"><a href="#Event-leave" class="headerlink" title="Event: leave"></a>Event: <code>leave</code></h4><figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line">Room.on(<span class="string">'leave'</span>, <span class="function">(<span class="params"><span class="keyword">this</span>: Room, leaverList: Contact[]</span>) =&gt;</span> <span class="built_in">void</span>)</div></pre></td></tr></table></figure>
+<h4 id="Event-topic"><a href="#Event-topic" class="headerlink" title="Event: topic"></a>Event: <code>topic</code></h4><figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line">Room.on(<span class="string">'topic'</span>, <span class="function">(<span class="params"><span class="keyword">this</span>: Room, topic: <span class="built_in">string</span>, oldTopic: <span class="built_in">string</span>, changer: Contact</span>) =&gt;</span> <span class="built_in">void</span>)</div></pre></td></tr></table></figure>
+<h3 id="Room-Query-Type"><a href="#Room-Query-Type" class="headerlink" title="Room Query Type"></a>Room Query Type</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">type</span> Query = &#123; topic: <span class="built_in">string</span>|Regex &#125;</div><div class="line">Room.find(query : Query) : Room | <span class="literal">null</span></div><div class="line">Room.findAll(query : Query) : Room[]</div></pre></td></tr></table></figure>
+<h3 id="static-Room-find-query-Query-Promise"><a href="#static-Room-find-query-Query-Promise" class="headerlink" title="static Room.find(query: Query): Promise"></a>static Room.find(query: Query): Promise<room></room></h3><p>Find room by topic, if the result more than one, return the first one.</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line">Room.find(&#123; topic:<span class="string">"Room Topic"</span>&#125; ) </div><div class="line">  .then(<span class="function"><span class="params">dingRoom</span> =&gt;</span>&#123;</div><div class="line">  <span class="comment">//Room Operation</span></div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<h3 id="static-Room-findAll-query-Query-Promise"><a href="#static-Room-findAll-query-Query-Promise" class="headerlink" title="static Room.findAll(query: Query): Promise"></a>static Room.findAll(query: Query): Promise<room[]></room[]></h3><p>Find room by topic, return all the match room</p>
+<h3 id="static-Room-create-contactList-Contact-topic-string-Promise"><a href="#static-Room-create-contactList-Contact-topic-string-Promise" class="headerlink" title="static Room.create(contactList: Contact[], topic?: string): Promise"></a>static Room.create(contactList: Contact[], topic?: string): Promise<void></void></h3><p>Create a new room.</p>
+<h3 id="Room-add-contact-Contact-Promise"><a href="#Room-add-contact-Contact-Promise" class="headerlink" title="Room.add(contact: Contact): Promise"></a>Room.add(contact: Contact): Promise<void></void></h3><p>Add contact in a room</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> friend = message.get(<span class="string">'from'</span>)</div><div class="line"><span class="keyword">const</span> room = Room.find(&#123; name: <span class="string">'Group Name'</span> &#125;)</div><div class="line"><span class="keyword">if</span> (room) &#123;</div><div class="line">  room.add(friend)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Room-del-contact-Contact-void"><a href="#Room-del-contact-Contact-void" class="headerlink" title="Room.del(contact: Contact): void"></a>Room.del(contact: Contact): void</h3><p>Delete a contact from the room</p>
+<h3 id="Room-topic-string"><a href="#Room-topic-string" class="headerlink" title="Room.topic(): string"></a>Room.topic(): string</h3><p>Get topic from the room</p>
+<h3 id="Room-topic-newTopic-string-void"><a href="#Room-topic-newTopic-string-void" class="headerlink" title="Room.topic(newTopic: string): void"></a>Room.topic(newTopic: string): void</h3><p>Set topic for the room </p>
+<h3 id="Room-alias-contact-Contact-string"><a href="#Room-alias-contact-Contact-string" class="headerlink" title="Room.alias (contact: Contact): string"></a>Room.alias (contact: Contact): string</h3><p>Get the contact’s alias in the room, if the contact doesn’t set its roomAlias in the room, it return name.</p>
+<h3 id="Room-has-contact-Contact-boolean"><a href="#Room-has-contact-Contact-boolean" class="headerlink" title="Room.has(contact Contact): boolean"></a>Room.has(contact Contact): boolean</h3><p>Check if the room has member <code>contact</code>. </p>
+<p>Return <code>true</code> if has contact, else return <code>false</code>.</p>
+<h3 id="Room-owner-Contact-null"><a href="#Room-owner-Contact-null" class="headerlink" title="Room.owner(): Contact|null"></a>Room.owner(): Contact|null</h3><p>Get room’s owner from the room.</p>
+<p>Not recommend, because cannot always get the owner</p>
+<h3 id="Room-member-name-string-Contact-null"><a href="#Room-member-name-string-Contact-null" class="headerlink" title="Room.member(name: string): Contact|null"></a>Room.member(name: string): Contact|null</h3><p>Find the contact by name in the room, equals to <code>Room.member({name:name})</code></p>
+<h4 id="notice"><a href="#notice" class="headerlink" title="notice:"></a>notice:</h4><p>there are three kinds of names in wechat:</p>
+<ul>
+<li><p><strong>Definition</strong>:  </p>
+<ul>
+<li><strong>name:</strong> the name-string set by user-self, should be called <strong>name</strong></li>
+<li><strong>room alias:</strong> the name-string set by user-self in a room, should be called <strong>room alias</strong>.  <strong>room alias</strong> only belongs to the room.</li>
+<li><strong>contact alias:</strong> the name-string set by bot for others, should be called <strong>contact alias</strong></li>
+</ul>
+</li>
+<li><p><strong>Display order in wechat room</strong>:</p>
+<ul>
+<li><p><strong>@ Event</strong><br>When someone @ a contact in  a room, wechat recognise the name order as follows:<br><code>room alias &gt; name</code></p>
+</li>
+<li><p><strong>system message</strong><br>When room event happens(join, leave, changetopic), system message recognise the name order as follows:<br><code>contact alias &gt; name</code></p>
+</li>
+<li><p><strong>on-screen Names</strong><br>The contact name showed to the wechat user in the group<br><code>contact alias &gt; room alias &gt; nickName</code></p>
+</li>
+</ul>
+</li>
+<li><p><strong><code>Room.member()</code> query key</strong>:</p>
+<ul>
+<li>self-set: {name: string}</li>
+<li>other-set: {alias: string}</li>
+</ul>
+</li>
+</ul>
+<h3 id="Room-member-alias-string-Contact-null"><a href="#Room-member-alias-string-Contact-null" class="headerlink" title="Room.member({alias: string}): Contact|null"></a>Room.member({alias: string}): Contact|null</h3><p>Find the contact by alias in the room</p>
+<h3 id="Room-member-name-string-Contact-null-1"><a href="#Room-member-name-string-Contact-null-1" class="headerlink" title="Room.member({name: string}): Contact|null"></a>Room.member({name: string}): Contact|null</h3><p>Find the contact by name in room.</p>
+<h3 id="Room-memberList-Contact"><a href="#Room-memberList-Contact" class="headerlink" title="Room.memberList(): Contact[]"></a>Room.memberList(): Contact[]</h3><p>Get all room member from the room</p>
+<h2 id="Class-FriendRequest"><a href="#Class-FriendRequest" class="headerlink" title="Class FriendRequest"></a>Class FriendRequest</h2><p>Send, receive friend request, and friend confirmation events.</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; FriendRequest &#125; <span class="keyword">from</span> <span class="string">'wechaty'</span></div></pre></td></tr></table></figure>
+<p>When someone sends you a friend request, there will be a Wechaty <code>friend</code> event fired.</p>
+<h3 id="FriendRequest-hello-string"><a href="#FriendRequest-hello-string" class="headerlink" title="FriendRequest.hello: string"></a>FriendRequest.hello: string</h3><p>Verify message</p>
+<h3 id="FriendRequest-accept-Promise"><a href="#FriendRequest-accept-Promise" class="headerlink" title="FriendRequest.accept(): Promise"></a>FriendRequest.accept(): Promise<boolean></boolean></h3><p>Accept a friend request</p>
+<p>Return a Promise, true for accept successful, false for failure.</p>
+<h3 id="FriendRequest-send-contact-Contact-hello-string-Promise"><a href="#FriendRequest-send-contact-Contact-hello-string-Promise" class="headerlink" title="FriendRequest.send(contact: Contact, hello: string): Promise"></a>FriendRequest.send(contact: Contact, hello: string): Promise<boolean></boolean></h3><p>Send a new friend request</p>
+<p>Return a Promise, true for accept successful, false for failure.</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">from</span> = message.from()</div><div class="line"><span class="keyword">const</span> request = <span class="keyword">new</span> FriendRequest()</div><div class="line">request.send(<span class="keyword">from</span>, <span class="string">'hello~'</span>)</div></pre></td></tr></table></figure>
+<h2 id="Class-MediaMessage"><a href="#Class-MediaMessage" class="headerlink" title="Class MediaMessage"></a>Class MediaMessage</h2><p>Create a media message object.</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; MediaMessage &#125; <span class="keyword">from</span> <span class="string">'wechaty'</span></div></pre></td></tr></table></figure>
+<h3 id="new-MediaMessage-path-string"><a href="#new-MediaMessage-path-string" class="headerlink" title="new MediaMessage(path: string)"></a>new MediaMessage(path: string)</h3><figure class="highlight ts"><table><tr><td class="code"><pre><div class="line">message.say(<span class="keyword">new</span> MediaMessage(<span class="string">'images.jpg'</span>))</div></pre></td></tr></table></figure>
+
                 <hr>
                 
 
                 <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2017/08/01/js-promise/" data-toggle="tooltip" data-placement="top"
+                           title="What is Promise in JavaScript">&larr; Previous Post</a>
+                    </li>
                     
                     
                     <li class="next">
@@ -219,7 +434,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Events"><span class="toc-text">Events:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Main-Classes"><span class="toc-text">Main Classes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Classes-Details"><span class="toc-text">Classes Details</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Wechaty-Class"><span class="toc-text">1.Wechaty Class</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-Wechaty-instance-profile-string-Wechaty"><span class="toc-text">1.1 Wechaty.instance(profile:string): Wechaty</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-Wechaty-init-Wechaty"><span class="toc-text">1.2  Wechaty.init(): Wechaty</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-Wechaty-say-content-string"><span class="toc-text">1.3 Wechaty.say(content: string)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Message-Class"><span class="toc-text">2 Message Class</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Message-from-contact-Contact-string-Contact"><span class="toc-text">Message.from(contact?: Contact|string): Contact</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Message-from-Contact"><span class="toc-text">1. Message.from(): Contact</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Message-from-contact-Contact-void"><span class="toc-text">2. Message.from(contact: Contact): void</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Message-from-contactId-string-void"><span class="toc-text">3. Message.from(contactId: string): void</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Message-to-contact-Contact-string-Contact-void"><span class="toc-text">Message.to(contact?: Contact|string): Contact|void</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Message-to-Contact"><span class="toc-text">1. Message.to(): Contact</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Message-to-contact-Contact-void"><span class="toc-text">2. Message.to(contact: Contact): void</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Message-to-contact-string-void"><span class="toc-text">3. Message.to(contact: string): void</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Message-content-content-string-string"><span class="toc-text">Message.content(content?: string): string</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Message-content-string"><span class="toc-text">1. Message.content(): string</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Message-content-content-string-string"><span class="toc-text">2. Message.content(content: string): string</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Message-room-room-Room-string-Room-void"><span class="toc-text">Message.room(room?: Room|string): Room|void</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Message-room-Room-null"><span class="toc-text">1. Message.room(): Room | null</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Message-room-room-Room-void"><span class="toc-text">2. Message.room(room: Room): void</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Message-room-roomId-string-void"><span class="toc-text">3. Message.room(roomId: string): void</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Message-type-MsgType"><span class="toc-text">Message.type(): MsgType</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Message-typeApp-AppMsgType"><span class="toc-text">Message.typeApp(): AppMsgType</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Message-say-content-string-Promise"><span class="toc-text">Message.say(content: string): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Message-mentioned-Contact"><span class="toc-text">Message.mentioned(): Contact[]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Message-self-message-Message-boolean"><span class="toc-text">Message.self(message: Message): boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Message-id-string"><span class="toc-text">Message.id: string</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Message-filename-string"><span class="toc-text">Message.filename():string</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Contact-Class"><span class="toc-text">Contact Class</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-id-string"><span class="toc-text">Contact.id: string</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-name-string-‘’"><span class="toc-text">Contact.name(): string | ‘’</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-city-string-undefined"><span class="toc-text">Contact.city(): string | undefined</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-province-string-undefined"><span class="toc-text">Contact.province(): string | undefined</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-gender-Gender-undefine"><span class="toc-text">Contact.gender(): Gender | undefine</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-avatar"><span class="toc-text">Contact.avatar():</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-alias-string-null"><span class="toc-text">Contact.alias(): string | null</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-alias-alias-string-Promise"><span class="toc-text">Contact.alias(alias: string): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-weixin-string-‘’"><span class="toc-text">Contact.weixin(): string | ‘’</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-star-boolean"><span class="toc-text">Contact.star(): boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-refresh-Promise"><span class="toc-text">Contact.refresh(): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-self-boolean"><span class="toc-text">Contact.self(): boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-stranger-boolean"><span class="toc-text">Contact.stranger(): boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-say-content-string-Promise"><span class="toc-text">Contact.say(content: string): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contact-Query-Type"><span class="toc-text">Contact Query Type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static-Contact-find-query-Query-Promise"><span class="toc-text">static Contact.find(query: Query): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static-Contact-findAll-query-Query-Promise"><span class="toc-text">static Contact.findAll(query: Query): Promise</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-Room"><span class="toc-text">Class Room</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-say-content-string-replyTo-Contact-Contact-Promise"><span class="toc-text">Room.say(content: string, replyTo: Contact|Contact[]): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-refresh-Promise"><span class="toc-text">Room.refresh(): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-Events"><span class="toc-text">Room Events</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Event-join"><span class="toc-text">Event: join</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Event-leave"><span class="toc-text">Event: leave</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Event-topic"><span class="toc-text">Event: topic</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-Query-Type"><span class="toc-text">Room Query Type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static-Room-find-query-Query-Promise"><span class="toc-text">static Room.find(query: Query): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static-Room-findAll-query-Query-Promise"><span class="toc-text">static Room.findAll(query: Query): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static-Room-create-contactList-Contact-topic-string-Promise"><span class="toc-text">static Room.create(contactList: Contact[], topic?: string): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-add-contact-Contact-Promise"><span class="toc-text">Room.add(contact: Contact): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-del-contact-Contact-void"><span class="toc-text">Room.del(contact: Contact): void</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-topic-string"><span class="toc-text">Room.topic(): string</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-topic-newTopic-string-void"><span class="toc-text">Room.topic(newTopic: string): void</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-alias-contact-Contact-string"><span class="toc-text">Room.alias (contact: Contact): string</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-has-contact-Contact-boolean"><span class="toc-text">Room.has(contact Contact): boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-owner-Contact-null"><span class="toc-text">Room.owner(): Contact|null</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-member-name-string-Contact-null"><span class="toc-text">Room.member(name: string): Contact|null</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#notice"><span class="toc-text">notice:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-member-alias-string-Contact-null"><span class="toc-text">Room.member({alias: string}): Contact|null</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-member-name-string-Contact-null-1"><span class="toc-text">Room.member({name: string}): Contact|null</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Room-memberList-Contact"><span class="toc-text">Room.memberList(): Contact[]</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-FriendRequest"><span class="toc-text">Class FriendRequest</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FriendRequest-hello-string"><span class="toc-text">FriendRequest.hello: string</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FriendRequest-accept-Promise"><span class="toc-text">FriendRequest.accept(): Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FriendRequest-send-contact-Contact-hello-string-Promise"><span class="toc-text">FriendRequest.send(contact: Contact, hello: string): Promise</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-MediaMessage"><span class="toc-text">Class MediaMessage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#new-MediaMessage-path-string"><span class="toc-text">new MediaMessage(path: string)</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
