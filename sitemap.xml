@@ -2,16 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xinghu0164.github.io/2017/08/01/js-promise/</loc>
+    <loc>http://xinghu0164.github.io/2017/08/05/ngrok/</loc>
     
-    <lastmod>2017-08-01T01:46:57.000Z</lastmod>
+    <lastmod>2017-09-18T01:55:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xinghu0164.github.io/2017/09/11/behaviorquestions/</loc>
+    
+    <lastmod>2017-09-12T04:45:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xinghu0164.github.io/2017/07/03/behaviorQA1/</loc>
+    
+    <lastmod>2017-09-11T05:33:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xinghu0164.github.io/2017/09/11/techquestions/</loc>
+    
+    <lastmod>2017-09-11T01:41:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xinghu0164.github.io/2017/07/11/behaviorQA2/</loc>
+    
+    <lastmod>2017-09-11T01:36:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xinghu0164.github.io/2017/08/07/bigO/</loc>
+    
+    <lastmod>2017-09-11T00:53:31.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://xinghu0164.github.io/2017/08/01/AsynchFunction/</loc>
     
-    <lastmod>2017-08-01T01:38:43.000Z</lastmod>
+    <lastmod>2017-08-05T07:18:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xinghu0164.github.io/2017/08/01/js-promise/</loc>
+    
+    <lastmod>2017-08-01T01:46:57.000Z</lastmod>
     
   </url>
   
@@ -51,21 +93,7 @@
   </url>
   
   <url>
-    <loc>http://xinghu0164.github.io/2017/07/11/hebaviorquestion2/</loc>
-    
-    <lastmod>2017-07-19T04:19:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://xinghu0164.github.io/2017/06/26/markdown-note/</loc>
-    
-    <lastmod>2017-07-19T04:19:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xinghu0164.github.io/2017/07/03/behaviorquestion/</loc>
     
     <lastmod>2017-07-19T04:19:22.000Z</lastmod>
     

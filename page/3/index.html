@@ -22,7 +22,7 @@
         
     </title>
 
-    <link rel="canonical" href="http://xinghu0164.github.io/archives/2017/07/">
+    <link rel="canonical" href="http://xinghu0164.github.io/page/3/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -44,7 +44,7 @@
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
-" data-ishome = "false" >
+" data-ishome = "true" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -141,367 +141,321 @@
 </script>
 
 <!-- Main Content -->
+
+
 <style>
-    .intro-header .site-heading {
-        margin: 50px;
+
+    .custom-haojen-container .post-preview:nth-of-type(1),
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        text-align: center;
+        background-repeat: no-repeat;
+        border-radius: 3px;
+        background-size: cover;
+        padding: 0;
+        height: 300px;
+        display: table;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.16);
+    }
+
+    /*去掉诗歌的背景图片*/
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        background-image: none !important;
+        background-color: rgba(255, 248, 220, 0.5);
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) h2,
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta,
+    .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+        text-shadow: 0 0 40px rgba(0, 0, 0, 1);
+        letter-spacing: 1px;
+        color: #fff;
+        margin-top: 0;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta {
+        font-size: .9em;
+        font-weight: 300;
+        margin-top: 0;
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-child(1) .post-subtitle {
+        letter-spacing: 6px;
+        font-size: 18px;
+        font-family: unset;
+        font-weight: 400;
+        color: rgba(0, 0, 0, .75)
+    }
+
+    /*不显示摘要*/
+    .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
+        display: none
+    }
+
+    /*只第一个显示背景图片*/
+    .custom-haojen-container .post-preview:not(:nth-child(1)) {
+        background-image: none !important;
+    }
+
+    /*第一个分界线去掉*/
+    .custom-haojen-container hr:nth-of-type(1) {
+        display: none;
+    }
+
+    /*主题*/
+    .custom-haojen-container .post-preview:nth-of-type(1) > a {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    /*诗词标题*/
+    .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+        font-size: 35px;
+        font-family: STKaiti;
+        color: rgba(0, 0, 0, .8);
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
+        color: #0e2231;
+    }
+
+    @media (max-width: 768px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 240px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 28px !important;
+            margin-top: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-of-type(1) > a {
+            padding: 20px
+        }
+    }
+
+    /*手机屏幕*/
+    @media (max-width: 400px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 195px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 20px !important;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 16px;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) a {
+            padding: 30px 20px;
+        }
     }
 </style>
 
 <!-- Page Header -->
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
+    <div class="row">
+        <header class="intro-header">
+            <div class="container">
                 <div class="site-heading text-center">
-                    <h1>Archives</h1>
-                    <span class="subheading"></span>
+                    <div class="about-me">
+                        <!--移动端头部显示-->
+                        <img src="//chuantu.biz/t5/121/1498799967x2890202582.png"/>
+                        <h5><a href="/about/">Xing Hu (Stella)</a></h5>
+                        <p>Keep learning</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </header>
     </div>
-</header>
-
+</div>
 <!-- Main Content -->
-<div class="container">
+<div class="container custom-haojen-container">
+    <!-- Post Container -->
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- archive list -->
-            
-				
-				
-				
-					
-					
-					<div class="archive archive-year" data-date="2017">
-						<h2 class="archive-title">
-						<span class="fa fa-archive">
-							<a href="/archives/2017">2017</a>
-						</span>
-						</h2>
-				
-				
-					
-					
-					<div class="archive archive-month" data-date="201709">
-						<h3 class="archive-title">
-							<a href="/archives/2017/09">09</a>
-						</h3>
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/09/11/techquestions/">
-                        <h4 class="post-title">
-                            Technical Questions Summary
-                        </h4>
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+            <!-- Main Content -->
+
+
+
+<div class="post-preview "
+     style="background-image: url('http://chuantu.biz/t5/121/1498801515x2079549492.jpg')">
+    <a href="/2017/06/20/Get-Start/">
+        <h2 class="post-title">
+            Introduction of Hexo
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-06-20
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                Introduction of Website TechniquesThis website build on Hexo and Github Pages. 
+Hexo is a fast, simple &amp; powerful blog framework. It is based on..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<!-- 翻页 pager -->
+
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/page/2/">&larr; Newer Posts</a>
+    </li>
+    
+    
+</ul>
+
+
+        </div>
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+
+            <!-- About Me -->
+            <section class="visible-md visible-lg" style="padding: 0 18px">
+                <div class="short-about">
+                    <!--侧边栏头像-->
+                    
+                    <img src="//chuantu.biz/t5/121/1498799967x2890202582.png"/>
+                    
+                    <h5><a href="/about/">Xing Hu (Stella)</a></h5>
+                    
+                    <p>Keep learning</p>
+                    
+                    <hr>
+                    <!-- SNS Link 社交 -->
+                    <ul class="list-inline">
                         
-                    </a>
+                        
+                        
+
+                        
+
+                        
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/xing.hu.7186">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                        </span>
+                            </a>
+                        </li>
+                        
+
+                        
+                        <li>
+                            <a target="_blank" href="https://github.com/xinghu0164">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                        </span>
+                            </a>
+                        </li>
+                        
+
+                        
+                        <li>
+                            <a target="_blank" href="https://www.linkedin.com/in/xing-hu-b49912123">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                        </span>
+                            </a>
+                        </li>
+                        
+                    </ul>
                 </div>
-				<hr>
-				</div>
+            </section>
+
+            <!-- Featured Tags  标签 -->
             
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/09/11/behaviorquestions/">
-                        <h4 class="post-title">
-                            Behavior Questions Summary
-                        </h4>
-                        
-                    </a>
+            <section>
+                <div class="tags">
+                    
+                    
+                    <a href="/tags/#JavaScript" title="JavaScript"
+                       rel="3">JavaScript</a>
+                    
+                    
+                    
+                    <a href="/tags/#C#" title="C#"
+                       rel="2">C#</a>
+                    
+                    
+                    
+                    <a href="/tags/#Hexo" title="Hexo"
+                       rel="1">Hexo</a>
+                    
+                    
+                    
+                    <a href="/tags/#ASP.NET" title="ASP.NET"
+                       rel="1">ASP.NET</a>
+                    
+                    
+                    
+                    <a href="/tags/#AngularJS" title="AngularJS"
+                       rel="2">AngularJS</a>
+                    
+                    
+                    
+                    <a href="/tags/#Interview Questions" title="Interview Questions"
+                       rel="4">Interview Questions</a>
+                    
+                    
+                    
+                    <a href="/tags/#BigO" title="BigO"
+                       rel="1">BigO</a>
+                    
+                    
+                    
+                    <a href="/tags/#MarkDown" title="MarkDown"
+                       rel="1">MarkDown</a>
+                    
+                    
+                    
+                    <a href="/tags/#wechaty" title="wechaty"
+                       rel="1">wechaty</a>
+                    
+                    
+                    
+                    <a href="/tags/#Useful Tool" title="Useful Tool"
+                       rel="1">Useful Tool</a>
+                    
+                    
                 </div>
-				<hr>
-				</div>
+            </section>
             
-				
-				
-				
-				
-					
-					</div><!--month-->
-					
-					
-					<div class="archive archive-month" data-date="201708">
-						<h3 class="archive-title">
-							<a href="/archives/2017/08">08</a>
-						</h3>
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/08/07/bigO/">
-                        <h4 class="post-title">
-                            Big O Theory
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
+
             
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/08/05/ngrok/">
-                        <h4 class="post-title">
-                            Ngrok
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/08/01/AsynchFunction/">
-                        <h4 class="post-title">
-                            Async functions - making promises friendly
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/08/01/js-promise/">
-                        <h4 class="post-title">
-                            What is Promise in JavaScript
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-					
-					</div><!--month-->
-					
-					
-					<div class="archive archive-month" data-date="201707">
-						<h3 class="archive-title">
-							<a href="/archives/2017/07">07</a>
-						</h3>
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/07/25/wechaty/">
-                        <h4 class="post-title">
-                            Wechaty API
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/07/19/angular2/">
-                        <h4 class="post-title">
-                            AngularJS Study Notes 2
-                        </h4>
-                        
-                        <h4 class="post-subtitle">
-                            Modules and Directives
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/07/18/angular1/">
-                        <h4 class="post-title">
-                            AngularJS Basic Concepts
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/07/11/behaviorQA2/">
-                        <h4 class="post-title">
-                            Behavior Questions Preparation 2
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/07/07/js1/">
-                        <h4 class="post-title">
-                            JavaScript Study Notes1
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/07/03/behaviorQA1/">
-                        <h4 class="post-title">
-                            Behavior Questions Preparation 1
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/07/01/C-L2/">
-                        <h4 class="post-title">
-                            C# Study Note2
-                        </h4>
-                        
-                        <h4 class="post-subtitle">
-                            Data Types and Variables
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-					
-					</div><!--month-->
-					
-					
-					<div class="archive archive-month" data-date="201706">
-						<h3 class="archive-title">
-							<a href="/archives/2017/06">06</a>
-						</h3>
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/06/30/NetL1/">
-                        <h4 class="post-title">
-                            ASP.Net Study Note1
-                        </h4>
-                        
-                        <h4 class="post-subtitle">
-                            Basic Concepts
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/06/26/markdown-note/">
-                        <h4 class="post-title">
-                            markdown-note
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/06/24/C-L1/">
-                        <h4 class="post-title">
-                            C# Study Note1
-                        </h4>
-                        
-                        <h4 class="post-subtitle">
-                            Basic Concepts
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/06/20/Get-Start/">
-                        <h4 class="post-title">
-                            Introduction of Hexo
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
+
         </div>
     </div>
 </div>
-
 <!-- Footer -->
 <!-- Footer -->
 <footer>
